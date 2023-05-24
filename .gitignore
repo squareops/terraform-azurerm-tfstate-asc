@@ -8,6 +8,7 @@
 # Local .terraform directories
 **/.terraform/*
 .terraform*
+example/complete/.terraform*
 
 # .tfstate files
 *.tfstate
