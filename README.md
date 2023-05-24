@@ -1,3 +1,3 @@
-# Azure terraform tf state module
+# Azure tfstate Terraform Module
 
 - To store ***.tfstate*** file in Azure cloud backend.
