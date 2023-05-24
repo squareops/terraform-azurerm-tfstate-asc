@@ -1,5 +1,13 @@
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+*.out
+*.lock
+*.tfvars
+*.pem
+*.txt
+
 # Local .terraform directories
 **/.terraform/*
+.terraform*
 
 # .tfstate files
 *.tfstate
