@@ -2,7 +2,6 @@ locals {
   tags = {
     Automation  = "true"
     Environment = var.environment
-    Name        = "skaf"
   }
 }
 
@@ -16,7 +15,7 @@ resource "azurerm_resource_group" "resource_group" {
 
 resource "azurerm_key_vault" "key_vault" {
   depends_on = [azurerm_resource_group.resource_group]
-  name                        = format("%s-%s-key", local.tags.Environment, local.tags.Name)
+  name                        = format("%s-%s-key", var.azure_key_vault_name, var.environment)
   location                    = azurerm_resource_group.resource_group.location
   resource_group_name         = azurerm_resource_group.resource_group.name
   enabled_for_disk_encryption = true

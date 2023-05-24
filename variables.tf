@@ -22,6 +22,12 @@ variable "storage_container_name" {
   type    = string
 }
 
+variable "azure_key_vault_name" {
+  description = "Name of the key to be created."
+  default = "skaf"
+  type    = string
+}
+
 variable "force_destroy" {
   description = "Whether or not to delete all objects from the storage to allow for destruction of the bucket without error."
   default     = false
