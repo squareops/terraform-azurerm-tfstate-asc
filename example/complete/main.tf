@@ -13,7 +13,7 @@ module "backend" {
   source                    = "../../"
   resource_group_name       = local.name
   storage_account_name      = local.name
-  storage_container_name    = "tfstate-container" # unique storage container name
+  storage_container_name    = "tfstate" # unique storage container name
   azure_key_vault_name      = local.name
   resource_group_location   = local.region
   environment               = local.environment
