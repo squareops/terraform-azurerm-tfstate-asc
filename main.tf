@@ -1,7 +1,7 @@
 locals {
   tags = {
     Automation  = "true"
-    Environment = "demo"
+    Environment = var.environment
     Name        = "skaf"
   }
 }
@@ -42,13 +42,13 @@ resource "azurerm_storage_container" "storage_container" {
   depends_on = [azurerm_storage_account.storage_account]
 }
 
-resource "azurerm_log_analytics_workspace" "log_analytics" {
-  name                = format("%s-%s-logs-workspace", var.storage_account_name, var.environment)
-  location            = azurerm_resource_group.resource_group.location
-  resource_group_name = azurerm_resource_group.resource_group.name
-  retention_in_days   = 30
-  tags = local.tags
-}
+# resource "azurerm_log_analytics_workspace" "log_analytics" {
+#   name                = format("%s-%s-logs-workspace", var.storage_account_name, var.environment)
+#   location            = azurerm_resource_group.resource_group.location
+#   resource_group_name = azurerm_resource_group.resource_group.name
+#   retention_in_days   = 30
+#   tags = local.tags
+# }
 
 # data "azurerm_subscription" "primary" {}
 
@@ -85,32 +85,32 @@ resource "azurerm_log_analytics_workspace" "log_analytics" {
 #   depends_on = [azurerm_storage_account.storage_account, azurerm_role_definition.role_assignment_contributor]
 # }
 
-resource "azurerm_monitor_diagnostic_setting" "diagnostic_setting" {
-  name               = format("%s-%s-monitor-diagnostic", var.storage_account_name, var.environment)
-  target_resource_id = "${azurerm_storage_account.storage_account.id}/blobServices/default/"
-  log_analytics_workspace_id = azurerm_log_analytics_workspace.log_analytics.id
+# resource "azurerm_monitor_diagnostic_setting" "diagnostic_setting" {
+#   name               = format("%s-%s-monitor-diagnostic", var.storage_account_name, var.environment)
+#   target_resource_id = "${azurerm_storage_account.storage_account.id}/blobServices/default/"
+#   log_analytics_workspace_id = azurerm_log_analytics_workspace.log_analytics.id
 
-  log {
-    category = "StorageRead"
-    enabled  = true
-  }
+#   log {
+#     category = "StorageRead"
+#     enabled  = true
+#   }
 
-  log {
-    category = "StorageWrite"
-    enabled  = true
-  }
+#   log {
+#     category = "StorageWrite"
+#     enabled  = true
+#   }
 
-  metric {
-    category = "AllMetrics"
-    enabled  = true
-  }
+#   metric {
+#     category = "AllMetrics"
+#     enabled  = true
+#   }
 
-  depends_on = [
-    azurerm_log_analytics_workspace.log_analytics,
-    # azurerm_role_assignment.role_assignment
-  ]
+#   depends_on = [
+#     azurerm_log_analytics_workspace.log_analytics,
+#     # azurerm_role_assignment.role_assignment
+#   ]
 
-}
+# }
 
 # resource "azurerm_storage_account_network_rules" "storage_networkrules" {
 #   storage_account_id = azurerm_storage_account.storage_account.id
