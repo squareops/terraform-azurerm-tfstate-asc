@@ -1,7 +1,6 @@
 locals {
   tags = {
     Automation  = "true"
-    Environment = var.environment
   }
 }
 
