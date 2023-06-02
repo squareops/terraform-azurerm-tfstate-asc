@@ -7,7 +7,7 @@ locals {
 data "azuread_client_config" "current" {}
 
 resource "azurerm_resource_group" "resource_group" {
-  name     = format("%s-%s-name", var.azurerm_resource_group, var.environment)
+  name     = format("%s-%s-name", var.resource_group_name, var.environment)
   location = var.resource_group_location
   tags = local.tags
 }
