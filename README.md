@@ -28,12 +28,33 @@ Terraform state locking is a mechanism used to prevent multiple users from simul
 
 By using Azure Blob Storage as the backend for storing the tfstate file, Terraform automatically benefits from the built-in locking mechanism provided by Azure. This ensures the safety and consistency of your infrastructure state when working in a team or executing multiple Terraform operations simultaneously.
 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_azure"></a> [azure](#requirement\_aws) | >= 2.50.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_azure"></a> [azure](#provider\_azure) | >= 2.50.0 |
 
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+| [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
+| [azurerm_storage_container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_storage_container_name"></a> [storage\_container\_name](#input\_bucket\_name) | Name of the Storage container to be created. | `string` | `""` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Specify the type of environment(dev, demo, prod) in which the Storage account, Storage container and resource group will be created. | `string` | `"demo"` | no |
 
 ## Outputs
 

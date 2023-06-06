@@ -22,12 +22,6 @@ variable "storage_container_name" {
   type    = string
 }
 
-variable "azure_key_vault_name" {
-  description = "Name of the key vault to be created."
-  default = ""
-  type    = string
-}
-
 variable "environment" {
   description = "Specify the type of environment(dev, demo, prod) in which the storage account will be created. "
   default     = ""
