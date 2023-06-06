@@ -55,6 +55,9 @@ By using Azure Blob Storage as the backend for storing the tfstate file, Terrafo
 |------|-------------|------|---------|:--------:|
 | <a name="input_storage_container_name"></a> [storage\_container\_name](#input\_bucket\_name) | Name of the Storage container to be created. | `string` | `""` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Specify the type of environment(dev, demo, prod) in which the Storage account, Storage container and resource group will be created. | `string` | `"demo"` | no |
+| <a name="input_region"></a> [region](#input\_region) | Specify the region in which the Storage account, Storage container and resource group will be created. | `string` | `"East US"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Specify the name of the project where Storage account, Storage container and resource group will be created. | `string` | `"skaf"` | no |
+| <a name="input_additional_tags"></a> [additional_tags](#input\_additional_tags) | Specify the tags for the resources such as Storage account, Storage container and resource group will be created. | `string` | `""` | no |
 
 ## Outputs
 
@@ -81,7 +84,7 @@ Apache License, Version 2.0, January 2004 (http://www.apache.org/licenses/).
 
 To support a GitHub project by liking it, you can follow these steps:
 
-  1. Visit the repository: Navigate to the [GitHub repository](https://github.com/squareops/terraform-aws-tfstate)
+  1. Visit the repository: Navigate to the [GitHub repository](https://github.com/squareops)
 
   2. Click the "Star" button: On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
 
