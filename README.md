@@ -21,7 +21,7 @@ module "backend" {
 }
 
 ```
-Refer [examples](https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=terraform#4-understand-state-locking) for more details.
+Refer examples for more details.
 
 ## Important Note
 Terraform state locking is a mechanism used to prevent multiple users from simultaneously making changes to the same Terraform state, which could result in conflicts and data loss. A state lock is acquired and maintained by Terraform while it is making changes to the state, and other instances of Terraform are unable to make changes until the lock is released.
