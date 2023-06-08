@@ -10,7 +10,7 @@ locals {
 }
 
 module "backend" {
-  source                                = "../../"
+  source                                = "squareops/tfstate/azure"
   resource_group_name                   = local.name
   storage_account_name                  = local.name
   storage_container_name                = "tfstate" # unique storage container name
