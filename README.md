@@ -18,9 +18,8 @@ module "backend" {
   resource_group_location   = local.region
   environment               = local.environment
 }
-
 ```
-Refer examples for more details.
+Refer [examples](https://github.com/sq-ia/terraform-azure-tfstate/tree/release/v1/example/complete) for more details.
 
 ## Important Note
 Terraform state locking is a mechanism used to prevent multiple users from simultaneously making changes to the same Terraform state, which could result in conflicts and data loss. A state lock is acquired and maintained by Terraform while it is making changes to the state, and other instances of Terraform are unable to make changes until the lock is released.

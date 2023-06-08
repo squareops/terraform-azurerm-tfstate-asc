@@ -23,7 +23,7 @@ variable "storage_container_name" {
 }
 
 variable "environment" {
-  description = "Specify the type of environment(dev, demo, prod) in which the storage account will be created. "
+  description = "Specify the type of environment(dev, demo, prod) in which the storage account will be created."
   default     = ""
   type        = string
 }
