@@ -1,12 +1,6 @@
-locals {
-  tags = {
-    Automation  = "true"
-  }
-}
-
 # Create a resource group
 resource "azurerm_resource_group" "resource_group" {
-  name            = format("%s-%s-tfstate-rg", var.resource_group_name, var.environment)
+  name            = format("%s-%s-tfstate-rg", var.environment, var.resource_group_name)
   location        = var.resource_group_location
   tags            = local.tags
 }
