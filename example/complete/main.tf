@@ -5,7 +5,7 @@ locals {
 }
 
 module "backend" {
-  source                                = "git::https://github.com/prajwalakhuj/terraform-azure-tfstate.git?ref=release/v1"
+  source                                = "git::https://github.com/sq-ia/terraform-azure-tfstate.git?ref=release/v1"
 
   resource_group_name                   = local.name
   storage_account_name                  = local.name
