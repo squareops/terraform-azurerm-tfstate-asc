@@ -1,14 +1,7 @@
-locals {
-  tags = {
-    Automation  = "true"
-  }
-}
-
 # Create a resource group
 resource "azurerm_resource_group" "resource_group" {
-  name            = format("%s-%s-tfstate-rg", var.resource_group_name, var.environment)
+  name            = format("%s-%s-tfstate-rg", var.environment, var.resource_group_name)
   location        = var.resource_group_location
-  tags            = local.tags
 }
 
 # Create a storage account
@@ -19,7 +12,6 @@ resource "azurerm_storage_account" "storage_account" {
   location                    = azurerm_resource_group.resource_group.location
   account_tier                = "Standard" # Standard storage account type for blobs, file shares, queues, and tables. Recommended for most scenarios using Azure Storage. If you want support for network file system (NFS) in Azure Files, use the premium file shares account type.
   account_replication_type    = "LRS" # Locally redundant storage (LRS) copies your data synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but isn't recommended for applications requiring high availability or durability.
-  tags                        = local.tags
 }
 
 # Create a storage container

@@ -11,7 +11,7 @@ Terraform module to create Remote State Storage resources for workload deploymen
 
 ```hcl
 module "backend" {
-  source                    = "squareops/tfstate/azure"
+  source                    = "git::https://github.com/prajwalakhuj/terraform-azure-tfstate.git?ref=release/v1"
   resource_group_name       = local.name
   storage_account_name      = local.name
   storage_container_name    = "tfstate" # unique storage container name
