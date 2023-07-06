@@ -14,7 +14,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_backend"></a> [backend](#module\_backend) | squareops/tfstate/azure | n/a |
+| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate/azure](https://github.com/sq-ia/terraform-azure-tfstate/tree/release/v1) | n/a |
 
 ## Resources
 
@@ -59,7 +59,7 @@ Starring a repository on GitHub is a simple way to show your support and appreci
 
 To report an issue with a project:
 
-  1. Check the repository's [issue tracker](https://github.com/sq-ia/terraform-azure-tfstate) on GitHub
+  1. Check the repository's [issue tracker](https://github.com/sq-ia/terraform-azure-tfstate/issues) on GitHub
   2. Search to see if the issue has already been reported
   3. If you can't find an answer to your question in the documentation or issue tracker, you can ask a question by creating a new issue. Make sure to provide enough context and details.
 
