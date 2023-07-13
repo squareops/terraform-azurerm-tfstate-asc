@@ -4,7 +4,7 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_azure"></a> [azure](#requirement\_aws) | >= 2.50.0 |
+| <a name="requirement_azure"></a> [azure](#requirement\_azure) | >= 3.0.0 |
 
 ## Providers
 
@@ -14,7 +14,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate/azure](https://github.com/sq-ia/terraform-azure-tfstate/tree/release/v1) | n/a |
+| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate/azure](https://github.com/squareops/terraform-azure-tfstate/tree/main) | n/a |
 
 ## Resources
 
@@ -39,7 +39,7 @@ No resources.
 | <a name="output_storage_container_name"></a> [state\_storage\_container\_name](#output\_state\_storage\_container\_name) | Name of the Storage container where tfstate will be stored. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Security, Validation and pull-requests
-we have offered here high standard, quality code. Hence we are using several [pre-commit hooks](.pre-commit-config.yaml) and [GitHub Actions](https://gitlab.com/sq-ia/aws/eks/-/tree/v1.0.0#security-validation-and-pull-requests) as a workflow. So here we will create pull-requests to any branch and validate the request automatically using pre-commit tool.
+we have offered here high standard, quality code. Hence we are using several [pre-commit hooks](.pre-commit-config.yaml) and [GitHub Actions](https://gitlab.com/squareops/aws/eks/-/tree/v1.0.0#security-validation-and-pull-requests) as a workflow. So here we will create pull-requests to any branch and validate the request automatically using pre-commit tool.
 
 ## License
 
@@ -51,7 +51,7 @@ To support a GitHub project by liking it, you can follow these steps:
 
   1. Visit the repository: Navigate to the GitHub repository.
 
-  2. Click the "Star" [button](https://github.com/sq-ia/terraform-azure-tfstate): On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
+  2. Click the "Star" [button](https://github.com/squareops/terraform-azure-tfstate): On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
 
   3. Optionally, you can also leave a comment on the repository or open an issue to give feedback or suggest changes.
 
@@ -59,7 +59,7 @@ Starring a repository on GitHub is a simple way to show your support and appreci
 
 To report an issue with a project:
 
-  1. Check the repository's [issue tracker](https://github.com/sq-ia/terraform-azure-tfstate/issues) on GitHub
+  1. Check the repository's [issue tracker](https://github.com/squareops/terraform-azure-tfstate/issues) on GitHub
   2. Search to see if the issue has already been reported
   3. If you can't find an answer to your question in the documentation or issue tracker, you can ask a question by creating a new issue. Make sure to provide enough context and details.
 
