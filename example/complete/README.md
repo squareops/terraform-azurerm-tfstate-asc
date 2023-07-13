@@ -14,7 +14,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate/azure](https://github.com/squareops/terraform-azure-tfstate/tree/main) | n/a |
+| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate/azurerm](https://github.com/squareops/terraform-azure-tfstate/tree/main) | n/a |
 
 ## Resources
 
