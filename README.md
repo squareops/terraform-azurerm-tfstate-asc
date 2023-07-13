@@ -31,13 +31,13 @@ By using Azure Blob Storage as the backend for storing the tfstate file, Terrafo
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_azure"></a> [azure](#requirement\_azure) | >= 2.50.0 |
+| <a name="requirement_azure"></a> [azure](#requirement\_azure) | >= 3.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azure"></a> [azure](#provider\_azure) | >= 2.50.0 |
+| <a name="provider_azure"></a> [azure](#provider\_azure) | >= 3.0.0 |
 
 ## Resources
 
