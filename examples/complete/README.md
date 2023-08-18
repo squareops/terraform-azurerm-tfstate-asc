@@ -14,7 +14,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate/azurerm](https://github.com/squareops/terraform-azure-tfstate/tree/main) | n/a |
+| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate-asc/azurerm](https://github.com/squareops/terraform-azurerm-tfstate-asc/tree/main) | n/a |
 
 ## Resources
 
@@ -51,7 +51,7 @@ To support a GitHub project by liking it, you can follow these steps:
 
   1. Visit the repository: Navigate to the GitHub repository.
 
-  2. Click the "Star" [button](https://github.com/squareops/terraform-azure-tfstate): On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
+  2. Click the "Star" [button](https://github.com/squareops/terraform-azurerm-tfstate-asc): On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
 
   3. Optionally, you can also leave a comment on the repository or open an issue to give feedback or suggest changes.
 
@@ -59,7 +59,7 @@ Starring a repository on GitHub is a simple way to show your support and appreci
 
 To report an issue with a project:
 
-  1. Check the repository's [issue tracker](https://github.com/squareops/terraform-azure-tfstate/issues) on GitHub
+  1. Check the repository's [issue tracker](https://github.com/squareops/terraform-azurerm-tfstate-asc/issues) on GitHub
   2. Search to see if the issue has already been reported
   3. If you can't find an answer to your question in the documentation or issue tracker, you can ask a question by creating a new issue. Make sure to provide enough context and details.
 

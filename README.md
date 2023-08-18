@@ -11,7 +11,7 @@ Terraform module to create Remote State Storage resources for workload deploymen
 
 ```hcl
 module "backend" {
-  source                    = "squareops/tfstate/azurerm"
+  source                    = "squareops/tfstate-asc/azurerm"
   resource_group_name       = local.name
   storage_account_name      = local.name
   storage_container_name    = "tfstate" # unique storage container name
@@ -19,7 +19,7 @@ module "backend" {
   environment               = local.environment
 }
 ```
-Refer [examples](https://github.com/squareops/terraform-azure-tfstate/tree/main/example/complete) for more details.
+Refer [examples](https://github.com/squareops/terraform-azurerm-tfstate-asc/tree/main/example/complete) for more details.
 
 ## Important Note
 Terraform state locking is a mechanism used to prevent multiple users from simultaneously making changes to the same Terraform state, which could result in conflicts and data loss. A state lock is acquired and maintained by Terraform while it is making changes to the state, and other instances of Terraform are unable to make changes until the lock is released.
@@ -70,7 +70,7 @@ By using Azure Blob Storage as the backend for storing the tfstate file, Terrafo
 
 To report an issue with a project:
 
-  1. Check the repository's [issue tracker](https://github.com/squareops/terraform-azure-tfstate/issues) on GitHub
+  1. Check the repository's [issue tracker](https://github.com/squareops/terraform-azurerm-tfstate-asc/issues) on GitHub
   2. Search to see if the issue has already been reported
   3. If you can't find an answer to your question in the documentation or issue tracker, you can ask a question by creating a new issue. Make sure to provide enough context and details.
 
@@ -82,7 +82,7 @@ Apache License, Version 2.0, January 2004 (http://www.apache.org/licenses/).
 
 To support a GitHub project by liking it, you can follow these steps:
 
-  1. Visit the repository: Navigate to the [GitHub repository](https://github.com/squareops/terraform-azure-tfstate)
+  1. Visit the repository: Navigate to the [GitHub repository](https://github.com/squareops/terraform-azurerm-tfstate-asc)
 
   2. Click the "Star" button: On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
 
