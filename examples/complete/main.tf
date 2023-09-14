@@ -2,6 +2,11 @@ locals {
   region      = "East US"
   environment = "demo"
   name        = "skaf"
+  additional_tags = {
+    Owner      = "organization_name"
+    Expires    = "Never"
+    Department = "Engineering"
+  }
 }
 
 module "backend" {

@@ -1,10 +1,18 @@
+## Azure tfstate Terraform module
+![squareops_avatar]
+
+[squareops_avatar]: https://squareops.com/wp-content/uploads/2022/12/squareops-logo.png
+
+### [SquareOps Technologies](https://squareops.com/) Your DevOps Partner for Accelerating cloud journey.
+<br>
+Terraform module to create Remote State Storage resources for workload deployment on Azure Cloud.
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_azure"></a> [azure](#requirement\_azure) | >= 3.0.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | =3.0.0 |
 
 ## Providers
 
@@ -14,7 +22,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_backend"></a> [backend](#module\_backend) | [squareops/tfstate-asc/azurerm](https://github.com/squareops/terraform-azurerm-tfstate-asc/tree/main) | n/a |
+| <a name="module_backend"></a> [backend](#module\_backend) | squareops/tfstate-asc/azurerm | n/a |
 
 ## Resources
 
@@ -22,21 +30,15 @@ No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_storage_container_name"></a> [storage\_container\_name](#input\_bucket\_name) | Name of the Storage container to be created. | `string` | `""` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Specify the type of environment(dev, demo, prod) in which the Storage account, Storage container and resource group will be created. | `string` | `"demo"` | no |
-| <a name="input_region"></a> [region](#input\_region) | Specify the region in which the Storage account, Storage container and resource group will be created. | `string` | `"East US"` | no |
-| <a name="input_name"></a> [name](#input\_name) | Specify the name of the project where Storage account, Storage container and resource group will be created. | `string` | `"skaf"` | no |
-| <a name="input_additional_tags"></a> [additional_tags](#input\_additional_tags) | Specify the tags for the resources such as Storage account, Storage container and resource group will be created. | `string` | `""` | no |
+No inputs.
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="terraform_state_resource_group_name"></a> [terraform\_state\_resource\_group\_name](#output\_terraform\_state\_resource\_group\_name) | Name of the Resource Group that will be used to maintain resources list. |
-| <a name="output_storage_account_name"></a> [storage\_account\_name](#output\_log\_bucket\_name) | Name of the Storage account where storage container will be created for storing tfstate. |
-| <a name="output_storage_container_name"></a> [state\_storage\_container\_name](#output\_state\_storage\_container\_name) | Name of the Storage container where tfstate will be stored. |
+| <a name="output_terraform_state_resource_group_name"></a> [terraform\_state\_resource\_group\_name](#output\_terraform\_state\_resource\_group\_name) | Specify the resource group name in which an Storage account will be created by the module. |
+| <a name="output_terraform_state_storage_account"></a> [terraform\_state\_storage\_account](#output\_terraform\_state\_storage\_account) | Specify the storage account name in which an Storage container will be created by the module. |
+| <a name="output_terraform_state_storage_container_name"></a> [terraform\_state\_storage\_container\_name](#output\_terraform\_state\_storage\_container\_name) | Specify the storage container name in where tfstate will be stored by the module. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Security, Validation and pull-requests
 we have offered here high standard, quality code. Hence we are using several [pre-commit hooks](.pre-commit-config.yaml) and [GitHub Actions](https://gitlab.com/squareops/aws/eks/-/tree/v1.0.0#security-validation-and-pull-requests) as a workflow. So here we will create pull-requests to any branch and validate the request automatically using pre-commit tool.

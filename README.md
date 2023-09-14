@@ -12,14 +12,17 @@ Terraform module to create Remote State Storage resources for workload deploymen
 ```hcl
 module "backend" {
   source                    = "squareops/tfstate-asc/azurerm"
-  resource_group_name       = local.name
-  storage_account_name      = local.name
+  resource_group_name       = "skaf"
+  storage_account_name      = "skafaccount"
   storage_container_name    = "tfstate" # unique storage container name
-  resource_group_location   = local.region
-  environment               = local.environment
+  resource_group_location   = "eastus"
+  environment               = "prod"
 }
 ```
-Refer [examples](https://github.com/squareops/terraform-azurerm-tfstate-asc/tree/main/example/complete) for more details.
+Refer [examples](https://github.com/squareops/terraform-azurerm-tfstate-asc/tree/main/examples/complete) for more details.
+
+## Permissions
+The required permissions to create resources from this module can be found [here](https://github.com/squareops/terraform-azurerm-tfstate-asc/tree/main/roles.md)
 
 ## Important Note
 Terraform state locking is a mechanism used to prevent multiple users from simultaneously making changes to the same Terraform state, which could result in conflicts and data loss. A state lock is acquired and maintained by Terraform while it is making changes to the state, and other instances of Terraform are unable to make changes until the lock is released.
@@ -104,3 +107,46 @@ We believe that the key to success in the digital age is the ability to deliver 
 We provide [support](https://squareops.com/contact-us/) on all of our projects, no matter how small or large they may be.
 
 You can find more information about our company on this [squareops.com](https://squareops.com/), follow us on [Linkedin](https://www.linkedin.com/company/squareops-technologies-pvt-ltd/), or fill out a [job application](https://squareops.com/careers/). If you have any questions or would like assistance with your cloud strategy and implementation, please don't hesitate to [contact us](https://squareops.com/contact-us/).
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | =3.0.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | =3.0.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_resource_group.resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/3.0.0/docs/resources/resource_group) | resource |
+| [azurerm_storage_account.storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/3.0.0/docs/resources/storage_account) | resource |
+| [azurerm_storage_container.storage_container](https://registry.terraform.io/providers/hashicorp/azurerm/3.0.0/docs/resources/storage_container) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group to be created. | `string` | `""` | no |
+| <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | Name of the resource group location to be created. | `string` | `""` | no |
+| <a name="input_storage_account_name"></a> [storage\_account\_name](#input\_storage\_account\_name) | Name of the Storage account to be created. | `string` | `""` | no |
+| <a name="input_storage_container_name"></a> [storage\_container\_name](#input\_storage\_container\_name) | Name of the storage container to be created. | `string` | `""` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Specify the type of environment(dev, demo, prod) in which the storage account will be created. | `string` | `""` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_terraform_state_resource_group_name"></a> [terraform\_state\_resource\_group\_name](#output\_terraform\_state\_resource\_group\_name) | Specify the resource group name in which an Storage account will be created by the module. |
+| <a name="output_terraform_state_storage_account"></a> [terraform\_state\_storage\_account](#output\_terraform\_state\_storage\_account) | Specify the storage account name in which an Storage container will be created by the module. |
+| <a name="output_terraform_state_storage_container_name"></a> [terraform\_state\_storage\_container\_name](#output\_terraform\_state\_storage\_container\_name) | Specify the storage container name in where tfstate will be stored by the module. |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
